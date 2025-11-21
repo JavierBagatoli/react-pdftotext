@@ -154,7 +154,7 @@ const pdfToTextLikePDF = async (file: File | Blob | MediaSource, lineSpacing: nu
   return extractedText;
 };
 
-const selectModeToExtract = async (file: File | Blob | MediaSource, mode: 'simple' | 'advanced', lineSpacing): Promise<string> => {
+const selectModeToExtract = async (file: File | Blob | MediaSource, mode: 'simple' | 'advanced', lineSpacing: number = 1): Promise<string> => {
   if (mode === 'simple') {
     return pdfToText(file);
   } else {
